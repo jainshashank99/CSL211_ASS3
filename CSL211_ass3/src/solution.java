@@ -3,6 +3,32 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
 
+class counter{
+	public int state;//4 states: 0,1,2,3
+	public int value;//0: 0,1: gshare; 1: 2,3: bimodal
+	
+	public counter(){
+		state = 0;
+		value = 0;
+	}
+	
+	public counter(int state){
+		this.state = state;
+		if(state <= 1)
+			value = 0; //gshare
+		else
+			value = 1; //bimodal
+	}
+	
+	public int getValue(){
+		return value;
+	}
+	
+	public void update(boolean predict){
+		
+	}
+	
+}
 
 public class solution {
 
